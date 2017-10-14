@@ -39,6 +39,20 @@ public class Main {
         	System.out.println("Player under 18 is not allowed to play the game. Terminate now!");
         	return;
         }
+	// Bug 7: Player should be allowed to enter his name and initialize his balance here
+        System.out.print("Enter your name: ");
+        String playerName = console.readLine();
+        int playerBalance = 100;
+        System.out.print("How much is your balance: ");
+        try{
+        	playerBalance = Integer.parseInt(console.readLine());
+        	if(playerBalance < 0){
+        		playerBalance = 100;
+        		throw new Exception();
+        	}
+        }catch(Exception e){
+        	System.out.println("Invalid balance! Balance now set to " + playerBalance);
+        }
         while (true)
         {
             int winCount = 0;
