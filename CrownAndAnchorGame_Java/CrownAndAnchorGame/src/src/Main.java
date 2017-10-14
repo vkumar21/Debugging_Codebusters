@@ -53,6 +53,20 @@ public class Main {
         }catch(Exception e){
         	System.out.println("Invalid balance! Balance now set to " + playerBalance);
         }
+	// Bug 8: Bet amount should be asked here
+        // Bug 8: Min bet and max bet also notified here
+        System.out.print("How much do you want to bet(Min: 5; Max: 50): ");
+        //Default bet = 5
+        int bet = 5;
+        try{
+        	bet = Integer.parseInt(console.readLine());
+        	if(bet < 5 || bet > 50){
+        		bet = 5;
+        		throw new Exception();
+        	}
+        }catch(Exception e){
+        	System.out.println("Invalid bet! Bet set to " + bet);
+        }
         while (true)
         {
             int winCount = 0;
