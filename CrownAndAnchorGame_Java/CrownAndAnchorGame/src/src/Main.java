@@ -19,6 +19,20 @@ public class Main {
         int totalLosses = 0;
 
   // Code should be added here asking the player to input his age
+
+        while (true)
+        {
+	// Code should be added here asking the player to input his age
+		System.out.print("Enter your age: ");
+        	try{
+        		player_age = Integer.parseInt(console.readLine());
+        		if(player_age > 0 && player_age < 100)
+        			break; // Valid age entered
+        	}catch(Exception e){
+        		// Invalid age
+        		System.out.println("Invalid age! Please try again!");
+        	}
+        }
         while (true)
         {
             int winCount = 0;
